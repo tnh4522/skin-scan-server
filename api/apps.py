@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class UploadConfig(AppConfig):
+class ApiConfig(AppConfig):
     default_auto_field = 'django.db.unet.BigAutoField'
-    name = 'upload'
+    name = 'api'

@@ -45,11 +45,12 @@ class UploadImageView(APIView):
                 f.write(image_data)
 
             # Nếu muốn lưu thông tin vào Model UploadedImage thì:
-            # from .models import UploadedImage
+            # from .unet import UploadedImage
             # uploaded_obj = UploadedImage.objects.create(image=f"uploads/{file_name}")
             # (Có thể trả về thông tin model)
 
             return Response({
+                "status": 200,
                 "message": "Image saved!",
                 "file_name": file_name
             }, status=status.HTTP_201_CREATED)
